@@ -12,6 +12,7 @@ THEN the game is over
 WHEN the game is over 
 THEN you can save your initials and your score
 ```
+prepare yourself as the code is a bit wonky and the questions come quick
 
 https://eddyc2022.github.io/code-quiz/ 
  
