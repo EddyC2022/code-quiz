@@ -91,7 +91,7 @@ var hsDisplayName = document.getElementById("highscore-initials");
 var lastButtonsEl = document.getElementById("lastButtons");
 var submitButton = document.getElementById("submitScore");
 // ----------global variables-----------
-var timeLeft = 120;
+var timeLeft = 90;
 var timerInterval;
 var score = 0;
 var correct;
@@ -167,7 +167,7 @@ function replayQuiz(){
     highscoreContainer.style.display = "none";
     gameoverEl.style.display = "none";
     startPageEl.style.display = "flex";
-    timeLeft = 120;
+    timeLeft = 90;
     score = 0;
     currentQuestionIndex = 0;
 }
