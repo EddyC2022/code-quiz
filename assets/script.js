@@ -139,14 +139,16 @@ function startQuiz(){
 
 // -----had a bit of an issue with the decrement here but did half decrement to mitigate double countdown-----
     timerInterval = setInterval(function() {
-        timeLeft-=.5;
+        console.log(timeLeft)
+        // timeLeft-=.5;
+        timeLeft-=1;
         timer.textContent = "Time left: " + timeLeft;
     
         if(timeLeft === 0) {
           clearInterval(timerInterval)
           End()
         }
-      }, 1000);
+      }, 2000);
     quiz.style.display = "block";
 }
 // -----userchoice must equal the correctAnswer object in quizQuestion variable, else timer goes down 10 seconds and user does not get 1 point-----
@@ -173,10 +175,11 @@ function replayQuiz(){
 }
 // ---removes highscore stored in localstorage, refreshes page to beginning---
 function clearHighScore(){
-    window.localStorage.clear();
-    hsDisplayName.textContent = "";
-    hsContainerEl.textContent = "";
-    document.location.reload();
+    // window.localStorage.clear();
+    localStorage.setItem("High Scores", "[]")
+    scoreList.textContent = "";
+    // hsContainerEl.textContent = "";
+   
 }
 // ---used within the timer function set to when the time runs out---
 function End() {
